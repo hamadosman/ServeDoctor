@@ -1,0 +1,46 @@
+WindowManager:
+
+    Window1:
+
+
+<Window1>
+    name: 'first'
+    filepath:filepath
+    fps:fps
+    dominant:dominant
+    next1:next1
+
+    GridLayout:
+        cols:1
+        size:root.width,root.height
+        GridLayout:
+            cols: 2
+            Label:
+                text:'Video Path: '
+            TextInput:
+                id:filepath
+                multiline:False
+            Label:
+                text:'Frames Per Second:'
+            TextInput:
+                id:fps
+                multiline:False
+            Label:
+                text:'Dominant Hand(Lefty or Righty:)'
+            TextInput:
+                id:dominant
+                multiline:False
+        GridLayout:
+
+            cols:3
+            Button:
+                text: 'Press To Analyze Trophy Position'
+                on_release:
+                    root.btn()
+            Button:
+                text: 'Press To Analyze Contact Point'
+                on_release:
+                    root.contact()
+            Button:
+                id: next1
+                text: 'Next Slide'
